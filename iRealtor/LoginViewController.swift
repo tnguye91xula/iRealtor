@@ -43,6 +43,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate  {
         performQuery()
         if(passwordTF.text == self.testPassword) {
             println("true")
+            presentViewController(AddHouseViewController(), animated: true, completion: nil)
         } else {
             println("false")
         }

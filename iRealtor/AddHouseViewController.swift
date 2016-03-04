@@ -16,7 +16,7 @@ class AddHouseViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tbvc = tabBarController!
+        //tbvc = tabBarController!
         //myOrder = tbvc.order
         //self.navigationController!.navigationBar.translucent = false;
         
