@@ -1,11 +1,3 @@
-//
-//  iRealtorTests.swift
-//  iRealtorTests
-//
-//  Created by Tuan Nguyen on 2/1/16.
-//  Copyright (c) 2016 Tuan Nguyen. All rights reserved.
-//
-
 import UIKit
 import XCTest
 

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB1C37CA1C6B0685004FF10F /* HouseInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1C37C91C6B0685004FF10F /* HouseInfo.swift */; };
+		AB1C37CE1C6B06F0004FF10F /* HouseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1C37CD1C6B06F0004FF10F /* HouseCell.swift */; };
+		AB1C37D51C6B4367004FF10F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1C37D41C6B4367004FF10F /* LoginViewController.swift */; };
+		AB2F4C971C6D1373000FB7E3 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2F4C961C6D1373000FB7E3 /* Extension.swift */; };
 		AB6EE6EE1C5FAB1400F12FFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6EE6ED1C5FAB1400F12FFC /* AppDelegate.swift */; };
 		AB6EE6F01C5FAB1400F12FFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6EE6EF1C5FAB1400F12FFC /* ViewController.swift */; };
 		AB6EE6F31C5FAB1400F12FFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB6EE6F11C5FAB1400F12FFC /* Main.storyboard */; };
@@ -15,10 +19,10 @@
 		AB6EE7041C5FAB1400F12FFC /* iRealtorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6EE7031C5FAB1400F12FFC /* iRealtorTests.swift */; };
 		AB6EE70E1C5FAB4900F12FFC /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6EE70D1C5FAB4900F12FFC /* MapViewController.swift */; };
 		AB6EE7101C5FAB9500F12FFC /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB6EE70F1C5FAB9500F12FFC /* MapKit.framework */; };
+		ABC133231C6BE88B00438775 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC133221C6BE88B00438775 /* FilterViewController.swift */; };
 		ABC9D4EE1C611D7D00F4AB26 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABC9D4ED1C611D7D00F4AB26 /* CloudKit.framework */; };
+		ABCF9CD91C654B470059D9A9 /* AddHouseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCF9CD81C654B470059D9A9 /* AddHouseViewController.swift */; };
 		ABFF25091C63BE4700670567 /* AvailableHouseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFF25081C63BE4700670567 /* AvailableHouseViewController.swift */; };
-		C12077641C72CD3B000BF04C /* AdminCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12077631C72CD3B000BF04C /* AdminCheck.swift */; };
-		C1F5F0C91C6C295F000AFFAE /* House.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F5F0C81C6C295F000AFFAE /* House.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +36,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AB1C37C91C6B0685004FF10F /* HouseInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HouseInfo.swift; sourceTree = "<group>"; };
+		AB1C37CD1C6B06F0004FF10F /* HouseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HouseCell.swift; sourceTree = "<group>"; };
+		AB1C37D41C6B4367004FF10F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		AB2F4C961C6D1373000FB7E3 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		AB6EE6E81C5FAB1400F12FFC /* iRealtor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iRealtor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB6EE6EC1C5FAB1400F12FFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB6EE6ED1C5FAB1400F12FFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -44,11 +52,11 @@
 		AB6EE7031C5FAB1400F12FFC /* iRealtorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iRealtorTests.swift; sourceTree = "<group>"; };
 		AB6EE70D1C5FAB4900F12FFC /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		AB6EE70F1C5FAB9500F12FFC /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		ABC133221C6BE88B00438775 /* FilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		ABC9D4EC1C611D3400F4AB26 /* iRealtor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = iRealtor.entitlements; sourceTree = "<group>"; };
 		ABC9D4ED1C611D7D00F4AB26 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		ABCF9CD81C654B470059D9A9 /* AddHouseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddHouseViewController.swift; sourceTree = "<group>"; };
 		ABFF25081C63BE4700670567 /* AvailableHouseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvailableHouseViewController.swift; sourceTree = "<group>"; };
-		C12077631C72CD3B000BF04C /* AdminCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminCheck.swift; sourceTree = "<group>"; };
-		C1F5F0C81C6C295F000AFFAE /* House.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = House.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +79,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AB1C37CB1C6B06B3004FF10F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AB1C37C91C6B0685004FF10F /* HouseInfo.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		AB1C37CC1C6B06D4004FF10F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				AB1C37CD1C6B06F0004FF10F /* HouseCell.swift */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		AB1C37D31C6B4241004FF10F /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AB1C37D41C6B4367004FF10F /* LoginViewController.swift */,
+				AB6EE70D1C5FAB4900F12FFC /* MapViewController.swift */,
+				ABC133221C6BE88B00438775 /* FilterViewController.swift */,
+				ABFF25081C63BE4700670567 /* AvailableHouseViewController.swift */,
+				ABCF9CD81C654B470059D9A9 /* AddHouseViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		AB2F4C951C6D135F000FB7E3 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				AB2F4C961C6D1373000FB7E3 /* Extension.swift */,
+			);
+			name = Extension;
+			sourceTree = "<group>";
+		};
 		AB6EE6DF1C5FAB1400F12FFC = {
 			isa = PBXGroup;
 			children = (
@@ -94,17 +138,17 @@
 		AB6EE6EA1C5FAB1400F12FFC /* iRealtor */ = {
 			isa = PBXGroup;
 			children = (
-				ABC9D4EC1C611D3400F4AB26 /* iRealtor.entitlements */,
 				AB6EE6ED1C5FAB1400F12FFC /* AppDelegate.swift */,
-				AB6EE70D1C5FAB4900F12FFC /* MapViewController.swift */,
-				ABFF25081C63BE4700670567 /* AvailableHouseViewController.swift */,
-				AB6EE6EF1C5FAB1400F12FFC /* ViewController.swift */,
+				AB2F4C951C6D135F000FB7E3 /* Extension */,
+				AB1C37D31C6B4241004FF10F /* ViewController */,
+				AB1C37CC1C6B06D4004FF10F /* Cell */,
+				AB1C37CB1C6B06B3004FF10F /* Model */,
+				ABC9D4EC1C611D3400F4AB26 /* iRealtor.entitlements */,
 				AB6EE6F11C5FAB1400F12FFC /* Main.storyboard */,
 				AB6EE6F41C5FAB1400F12FFC /* Images.xcassets */,
 				AB6EE6F61C5FAB1400F12FFC /* LaunchScreen.xib */,
+				AB6EE6EF1C5FAB1400F12FFC /* ViewController.swift */,
 				AB6EE6EB1C5FAB1400F12FFC /* Supporting Files */,
-				C1F5F0C81C6C295F000AFFAE /* House.swift */,
-				C12077631C72CD3B000BF04C /* AdminCheck.swift */,
 			);
 			path = iRealtor;
 			sourceTree = "<group>";
@@ -178,7 +222,6 @@
 		AB6EE6E01C5FAB1400F12FFC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "Tuan Nguyen";
 				TargetAttributes = {
@@ -243,9 +286,13 @@
 			files = (
 				AB6EE6F01C5FAB1400F12FFC /* ViewController.swift in Sources */,
 				ABFF25091C63BE4700670567 /* AvailableHouseViewController.swift in Sources */,
-				C12077641C72CD3B000BF04C /* AdminCheck.swift in Sources */,
+				AB1C37CE1C6B06F0004FF10F /* HouseCell.swift in Sources */,
+				ABC133231C6BE88B00438775 /* FilterViewController.swift in Sources */,
+				AB1C37CA1C6B0685004FF10F /* HouseInfo.swift in Sources */,
+				AB2F4C971C6D1373000FB7E3 /* Extension.swift in Sources */,
+				AB1C37D51C6B4367004FF10F /* LoginViewController.swift in Sources */,
+				ABCF9CD91C654B470059D9A9 /* AddHouseViewController.swift in Sources */,
 				AB6EE70E1C5FAB4900F12FFC /* MapViewController.swift in Sources */,
-				C1F5F0C91C6C295F000AFFAE /* House.swift in Sources */,
 				AB6EE6EE1C5FAB1400F12FFC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,34 +1,32 @@
-//
-//  AvailableHouseViewController.swift
-//  iRealtor
-//
-//  Created by Tuan Nguyen on 2/4/16.
-//  Edited By Almore Cato II
-//  Copyright (c) 2016 Tuan Nguyen. All rights reserved.
-//
-
 import UIKit
 import CloudKit
 
 class AvailableHouseViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
-   // var houses: Array<CKRecord> = []
-   // var houses: Array<House> = []
-
-    let items: NSMutableArray = NSMutableArray()
-      let houses: NSMutableArray = NSMutableArray()
-    
-    let tableView = UITableView()
+    var tableView = UITableView()
+    var houses: [HouseInfo] = []
+    var add = UIBarButtonItem()
+    private var tbvc = UITabBarController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchHouses()
-        self.navigationController?.navigationBar.topItem?.title = "List Of All Available Houses"
+        tbvc = tabBarController!
+        view.backgroundColor = UIColor.whiteColor()
         tableView.delegate = self
         tableView.dataSource = self
-        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        self.tableView.frame = self.view.frame
-        self.view.addSubview(tableView)
+        tableView.registerClass(HouseCell.self, forCellReuseIdentifier: NSStringFromClass(HouseCell))
+        tableView.setTranslatesAutoresizingMaskIntoConstraints(false);
+        self.tableView.reloadData()
+        view.addSubview(tableView)
+        
+        let top = NSLayoutConstraint(item: tableView, attribute: NSLayoutAttribute.Top, relatedBy: NSLayoutRelation.Equal, toItem:view, attribute: NSLayoutAttribute.Top, multiplier: 1.0, constant: 0)
+        
+        let bottom = NSLayoutConstraint(item: tableView, attribute: NSLayoutAttribute.Bottom, relatedBy: NSLayoutRelation.Equal, toItem:view, attribute: NSLayoutAttribute.Bottom, multiplier: 1.0, constant: 0)
+        
+        let leading = NSLayoutConstraint(item: tableView, attribute: NSLayoutAttribute.Leading, relatedBy: NSLayoutRelation.Equal, toItem:view, attribute: NSLayoutAttribute.Leading, multiplier: 1.0, constant: 0)
+        
+        let trailing = NSLayoutConstraint(item: tableView, attribute: NSLayoutAttribute.Trailing, relatedBy: NSLayoutRelation.Equal, toItem:view, attribute: NSLayoutAttribute.Trailing, multiplier: 1.0, constant: 0)
+        
+        NSLayoutConstraint.activateConstraints([top, bottom, leading, trailing])
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -36,28 +34,94 @@ class AvailableHouseViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.houses.count
+        return houses.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as! UITableViewCell
-        var hid: House = houses[indexPath.row] as! House
-        cell.textLabel?.text = String(hid.HouseID)
-        //cell.textLabel?.text = hid.locationToName()
-
+        let cell = tableView.dequeueReusableCellWithIdentifier( NSStringFromClass(HouseCell), forIndexPath: indexPath) as! HouseCell
+        cell.house = houses[indexPath.row]
         return cell
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        println("You selected cell #\(indexPath.row)!")
+        let cell = tableView.dequeueReusableCellWithIdentifier( NSStringFromClass(HouseCell), forIndexPath: indexPath) as! HouseCell
+        cell.house = houses[indexPath.row]
+        
+        var refreshAlert = UIAlertController(title: cell.house!.name, message: "", preferredStyle: UIAlertControllerStyle.Alert)
+        
+        refreshAlert.addAction(UIAlertAction(title: "Edit", style: .Default, handler: { (action: UIAlertAction!) in
+            var location: String = cell.house!.address!
+            var geocoder: CLGeocoder = CLGeocoder()
+            geocoder.geocodeAddressString(location) { (placemarks, error) -> Void in
+                if (placemarks.count > 0) {
+                    var topResult: CLPlacemark = placemarks[0] as! CLPlacemark
+                    var editViewControler = AddHouseViewController()
+                    editViewControler.type = "Edit"
+                    editViewControler.houseInfo = HouseInfo(name: cell.house!.name!, bathrooms: cell.house!.bathrooms!, bedrooms: cell.house!.bedrooms!, houseID: cell.house!.houseID!, location: CLLocation(latitude:topResult.location.coordinate.latitude ,longitude: topResult.location.coordinate.longitude)!, price: cell.house!.price!, sold: cell.house!.sold!)
+                    self.navigationController?.pushViewController(editViewControler, animated: true)
+                }
+            }
+        }))
+        
+        refreshAlert.addAction(UIAlertAction(title: "Delete", style: .Default, handler: { (action: UIAlertAction!) in
+            println("Delete Button Pressed")
+            self.deleteDatabaseRecord(cell.house!.name!)
+            self.houses.removeAtIndex(indexPath.row)
+            self.tableView.reloadData()
+        }))
+        
+        refreshAlert.addAction(UIAlertAction(title: "Cancel", style: .Default, handler: { (action: UIAlertAction!) in
+        }))
+        
+        refreshAlert.addAction(UIAlertAction(title: "Add To Favorite", style: .Default, handler: { (action: UIAlertAction!) in
+            println("Add To Favorite")
+            var location: String = cell.house!.address!
+            var geocoder: CLGeocoder = CLGeocoder()
+            geocoder.geocodeAddressString(location) { (placemarks, error) -> Void in
+                if (placemarks.count > 0) {
+                    var topResult: CLPlacemark = placemarks[0] as! CLPlacemark
+                    let recordID: CKRecordID = CKRecordID(recordName: cell.house?.name)
+                    let record: CKRecord = CKRecord(recordType: "HOUSE", recordID: recordID)
+                    record.setObject(cell.house?.bathrooms, forKey: "Bathrooms")
+                    record.setObject(cell.house?.bedrooms, forKey: "Bedrooms")
+                    record.setObject(cell.house?.houseID, forKey: "HouseID")
+                    record.setObject(cell.house?.price, forKey: "Price")
+                    record.setObject(cell.house?.sold, forKey: "Sold")
+                    var temp = CLLocationCoordinate2DMake(topResult.location.coordinate.latitude, topResult.location.coordinate.longitude)
+                    var location = CLLocation(latitude:temp.latitude ,longitude: temp.longitude)
+                    record.setObject(location, forKey: "Location")
+                    let asset = CKAsset(fileURL: self.saveImageToFile(cell.house!.image!))
+                    var assets: [CKAsset] = []
+                    assets.append(asset)
+                    record.setObject(assets, forKey: "Photos")
+                    let defaultContainer: CKContainer = CKContainer.defaultContainer()
+                    let publicDatabase: CKDatabase = defaultContainer.privateCloudDatabase
+                    publicDatabase.saveRecord(record, completionHandler: { (record, error) -> Void in
+                        if error != nil {
+                            println("Error with saving an record into private database")
+                        }
+                        if record != nil {
+                            println("Saved!!!")
+                        }
+                    })
+                }
+            }
+        }))
+        presentViewController(refreshAlert, animated: true, completion: nil)
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func saveImageToFile(image: UIImage) -> NSURL {
+        let dirPaths = NSSearchPathForDirectoriesInDomains(
+            .DocumentDirectory, .UserDomainMask, true)
+        let docsDir: AnyObject = dirPaths[0]
+        let filePath =
+        docsDir.stringByAppendingPathComponent("testImage.png")
+        UIImageJPEGRepresentation(image, 0.5).writeToFile(filePath,
+            atomically: true)
+        return NSURL.fileURLWithPath(filePath)!
     }
     
-    func fetchHouses() {
+    func queryHouses() {
         let container = CKContainer.defaultContainer()
         let publicDatabase = container.publicCloudDatabase
         let predicate = NSPredicate(value: true)
@@ -69,80 +133,82 @@ class AvailableHouseViewController: UIViewController, UITableViewDelegate, UITab
                 println(error)
             }
             else {
-                
                 for result in results {
-                    let tr:CKRecord = result as! CKRecord
-                    var testID:Int = tr.valueForKey("HouseID") as! Int
-                    var testPrice:Int = tr.valueForKey("Price") as! Int
-                    var testBeds:Int = tr.valueForKey("Bedrooms") as! Int
-                    var testBaths:Int = tr.valueForKey("Bathrooms") as! Int
-                    var testSold:Int = tr.valueForKey("Sold") as! Int
-                    var imageAsset: Array<CKAsset> = tr.valueForKey("Photos") as! Array<CKAsset>
-
-                    //var testImage: UIImage = UIImage(contentsOfFile: imageAsset[0].fileURL.path!)!
-                    
-                    //imageAsset = tr.valueForKey("Photo") as! NSMutableArray
-                    var testLocation:CLLocation = tr.valueForKey("Location") as! CLLocation
-                   var testHouse: House = House(HouseID: testID, Price: testPrice, Location: testLocation, Bedrooms: testBeds, Bathrooms: testBaths , Sold: testSold, Photo: imageAsset)
-                    self.houses.addObject(testHouse)
-                    println("House")
-                    println(testHouse.HouseID)
-                    println(testHouse.Location)
-                    println(testHouse.Price)
-                    println(testHouse.Bedrooms)
-                    println(testHouse.Bathrooms)
-                    println(testHouse.Sold)
-
+                    let record:CKRecord = result as! CKRecord
+                    var string = String()
+                    var location:CLLocation = record.valueForKey("Location") as! CLLocation
+                    let geoCoder = CLGeocoder()
+                    geoCoder.reverseGeocodeLocation(location) {
+                        (placemarks, error) -> Void in
+                        let placeArray = placemarks as! [CLPlacemark]!
+                        var placeMark: CLPlacemark!
+                        placeMark = placeArray?[0]
+                        if let locationName = placeMark.addressDictionary?["Name"] as? String {
+                            string += locationName
+                        }
+                        if let city = placeMark.addressDictionary?["City"] as? String {
+                            string += ", " + city
+                        }
+                        if let zip = placeMark.addressDictionary?["ZIP"] as? String {
+                            string += ", " + zip
+                        }
+                        var name = record.recordID.recordName
+                        var bathR = record.valueForKey("Bathrooms") as! Int
+                        var bedR = record.valueForKey("Bedrooms") as! Int
+                        var hID = record.valueForKey("HouseID") as! Int
+                        var price = record.valueForKey("Price") as! Int
+                        var sold = record.valueForKey("Sold") as! Int
+                        var assets: AnyObject = record.objectForKey("Photos")
+                        let imageData = NSData(contentsOfURL: assets[0].fileURL)
+                        var image = UIImage(data: imageData!)
+                        var house = HouseInfo(name: name, bathrooms: bathR, bedrooms: bedR, houseID: hID, address: string, price: price, sold: sold, image: image!)
+                        self.houses.append(house)
+                        NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                            self.tableView.reloadData()
+                        })
+                    }
                 }
-                
-                    println(self.houses.count)
-                
-            
-                NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
-                    self.tableView.reloadData()
-                    self.tableView.hidden = false
-                })
-                
-                
-                
             }
         }
     }
     
-    func writeRecord() {
-        let database = CKContainer.defaultContainer().publicCloudDatabase
-        var record = CKRecord(recordType: "HOUSE")
-        record.setObject(4, forKey: "Bathrooms")
-        record.setObject(3, forKey: "Bedrooms")
-        record.setObject(1234, forKey: "HouseID")
-        record.setObject(300000, forKey: "Price")
-        record.setObject(0, forKey: "Sold")
-        database.saveRecord(record, completionHandler: { (savedRecord, saveError) in
-            if saveError != nil {
-                println("Error saving record: \(saveError.localizedDescription)")
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.houses = []
+        self.navigationItem.hidesBackButton = true
+        self.navigationItem.rightBarButtonItem = add
+        queryHouses()
+    }
+    
+    func addTapped(sender:UIButton!) {
+        self.navigationController?.pushViewController(AddHouseViewController(), animated: true)
+    }
+    
+    func refreshTapped(sender:UIButton!) {
+        let temp = AvailableHouseViewController()
+        temp.add = UIBarButtonItem(barButtonSystemItem: .Add, target: temp, action: "addTapped:")
+        self.navigationController?.pushViewController(temp, animated: true)
+    }
+    
+    func deleteDatabaseRecord(recordName: String) {
+        let defaultContainer: CKContainer = CKContainer.defaultContainer()
+        let publicDataBase: CKDatabase = defaultContainer.publicCloudDatabase
+        let recordID: CKRecordID = CKRecordID(recordName: recordName)
+        publicDataBase.deleteRecordWithID(recordID, completionHandler: { (recordID, error) -> Void in
+            if error != nil {
+                NSOperationQueue.mainQueue().addOperationWithBlock {
+                    println("Error with deleting an record")
+                    self.tableView.reloadData()
+                }
             } else {
-                println("Successfully saved record!")
+                println("Deleting an record successful!!!")
             }
         })
     }
     
-    private func fetchUserRecord(recordID: CKRecordID) {
-        // Fetch Default Container
-        let defaultContainer = CKContainer.defaultContainer()
-//        print(house)
-        
-        // Fetch Private Database
-        let privateDatabase = defaultContainer.privateCloudDatabase
-        
-        // Fetch User Record
-        privateDatabase.fetchRecordWithID(recordID) { (record, error) -> Void in
-            if let responseError = error {
-                print(responseError)
-                
-            } else if let userRecord = record {
-                print(userRecord)
-            }
-        }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
 }
-//
+
