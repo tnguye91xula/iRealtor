@@ -1,0 +1,539 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AB1C37CA1C6B0685004FF10F /* HouseInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1C37C91C6B0685004FF10F /* HouseInfo.swift */; };
+		AB1C37CE1C6B06F0004FF10F /* HouseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1C37CD1C6B06F0004FF10F /* HouseCell.swift */; };
+		AB1C37D51C6B4367004FF10F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1C37D41C6B4367004FF10F /* LoginViewController.swift */; };
+		AB2F4C971C6D1373000FB7E3 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2F4C961C6D1373000FB7E3 /* Extension.swift */; };
+		AB6EE6EE1C5FAB1400F12FFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6EE6ED1C5FAB1400F12FFC /* AppDelegate.swift */; };
+		AB6EE6F01C5FAB1400F12FFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6EE6EF1C5FAB1400F12FFC /* ViewController.swift */; };
+		AB6EE6F31C5FAB1400F12FFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB6EE6F11C5FAB1400F12FFC /* Main.storyboard */; };
+		AB6EE6F51C5FAB1400F12FFC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB6EE6F41C5FAB1400F12FFC /* Images.xcassets */; };
+		AB6EE6F81C5FAB1400F12FFC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB6EE6F61C5FAB1400F12FFC /* LaunchScreen.xib */; };
+		AB6EE7041C5FAB1400F12FFC /* iRealtorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6EE7031C5FAB1400F12FFC /* iRealtorTests.swift */; };
+		AB6EE70E1C5FAB4900F12FFC /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6EE70D1C5FAB4900F12FFC /* MapViewController.swift */; };
+		AB6EE7101C5FAB9500F12FFC /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB6EE70F1C5FAB9500F12FFC /* MapKit.framework */; };
+		ABC133231C6BE88B00438775 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC133221C6BE88B00438775 /* FilterViewController.swift */; };
+		ABC9D4EE1C611D7D00F4AB26 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABC9D4ED1C611D7D00F4AB26 /* CloudKit.framework */; };
+		ABCF9CD91C654B470059D9A9 /* AddHouseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCF9CD81C654B470059D9A9 /* AddHouseViewController.swift */; };
+		ABFF25091C63BE4700670567 /* AvailableHouseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFF25081C63BE4700670567 /* AvailableHouseViewController.swift */; };
+		C14FEB381CB1C0400071C20A /* AdminListRealtorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14FEB371CB1C0400071C20A /* AdminListRealtorsViewController.swift */; };
+		C14FEB3A1CB1C1A50071C20A /* AdminOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14FEB391CB1C1A50071C20A /* AdminOptionsViewController.swift */; };
+		C1606BA01CAACB2A00436FF8 /* RealtorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1606B9F1CAACB2A00436FF8 /* RealtorCell.swift */; };
+		C1D56AD11CA9E31F00735EE5 /* AdminAvailableHouseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D56AD01CA9E31F00735EE5 /* AdminAvailableHouseViewController.swift */; };
+		C1D56AD31CA9E57F00735EE5 /* RealtorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D56AD21CA9E57F00735EE5 /* RealtorInfo.swift */; };
+		C1D56AD51CA9E7A100735EE5 /* AddRealtorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D56AD41CA9E7A100735EE5 /* AddRealtorViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AB6EE6FE1C5FAB1400F12FFC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AB6EE6E01C5FAB1400F12FFC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AB6EE6E71C5FAB1400F12FFC;
+			remoteInfo = iRealtor;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AB1C37C91C6B0685004FF10F /* HouseInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HouseInfo.swift; sourceTree = "<group>"; };
+		AB1C37CD1C6B06F0004FF10F /* HouseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HouseCell.swift; sourceTree = "<group>"; };
+		AB1C37D41C6B4367004FF10F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		AB2F4C961C6D1373000FB7E3 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		AB6EE6E81C5FAB1400F12FFC /* iRealtor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iRealtor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB6EE6EC1C5FAB1400F12FFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB6EE6ED1C5FAB1400F12FFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AB6EE6EF1C5FAB1400F12FFC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AB6EE6F21C5FAB1400F12FFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AB6EE6F41C5FAB1400F12FFC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		AB6EE6F71C5FAB1400F12FFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		AB6EE6FD1C5FAB1400F12FFC /* iRealtorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iRealtorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB6EE7021C5FAB1400F12FFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB6EE7031C5FAB1400F12FFC /* iRealtorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iRealtorTests.swift; sourceTree = "<group>"; };
+		AB6EE70D1C5FAB4900F12FFC /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		AB6EE70F1C5FAB9500F12FFC /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		ABC133221C6BE88B00438775 /* FilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		ABC9D4EC1C611D3400F4AB26 /* iRealtor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = iRealtor.entitlements; sourceTree = "<group>"; };
+		ABC9D4ED1C611D7D00F4AB26 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		ABCF9CD81C654B470059D9A9 /* AddHouseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddHouseViewController.swift; sourceTree = "<group>"; };
+		ABFF25081C63BE4700670567 /* AvailableHouseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvailableHouseViewController.swift; sourceTree = "<group>"; };
+		C14FEB371CB1C0400071C20A /* AdminListRealtorsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminListRealtorsViewController.swift; sourceTree = "<group>"; };
+		C14FEB391CB1C1A50071C20A /* AdminOptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminOptionsViewController.swift; sourceTree = "<group>"; };
+		C1606B9F1CAACB2A00436FF8 /* RealtorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealtorCell.swift; sourceTree = "<group>"; };
+		C1D56AD01CA9E31F00735EE5 /* AdminAvailableHouseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminAvailableHouseViewController.swift; sourceTree = "<group>"; };
+		C1D56AD21CA9E57F00735EE5 /* RealtorInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealtorInfo.swift; sourceTree = "<group>"; };
+		C1D56AD41CA9E7A100735EE5 /* AddRealtorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRealtorViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AB6EE6E51C5FAB1400F12FFC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB6EE7101C5FAB9500F12FFC /* MapKit.framework in Frameworks */,
+				ABC9D4EE1C611D7D00F4AB26 /* CloudKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB6EE6FA1C5FAB1400F12FFC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AB1C37CB1C6B06B3004FF10F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AB1C37C91C6B0685004FF10F /* HouseInfo.swift */,
+				C1D56AD21CA9E57F00735EE5 /* RealtorInfo.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		AB1C37CC1C6B06D4004FF10F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				AB1C37CD1C6B06F0004FF10F /* HouseCell.swift */,
+				C1606B9F1CAACB2A00436FF8 /* RealtorCell.swift */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		AB1C37D31C6B4241004FF10F /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AB1C37D41C6B4367004FF10F /* LoginViewController.swift */,
+				AB6EE70D1C5FAB4900F12FFC /* MapViewController.swift */,
+				ABC133221C6BE88B00438775 /* FilterViewController.swift */,
+				ABFF25081C63BE4700670567 /* AvailableHouseViewController.swift */,
+				ABCF9CD81C654B470059D9A9 /* AddHouseViewController.swift */,
+				C1D56AD01CA9E31F00735EE5 /* AdminAvailableHouseViewController.swift */,
+				C1D56AD41CA9E7A100735EE5 /* AddRealtorViewController.swift */,
+				C14FEB371CB1C0400071C20A /* AdminListRealtorsViewController.swift */,
+				C14FEB391CB1C1A50071C20A /* AdminOptionsViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		AB2F4C951C6D135F000FB7E3 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				AB2F4C961C6D1373000FB7E3 /* Extension.swift */,
+			);
+			name = Extension;
+			sourceTree = "<group>";
+		};
+		AB6EE6DF1C5FAB1400F12FFC = {
+			isa = PBXGroup;
+			children = (
+				ABC9D4ED1C611D7D00F4AB26 /* CloudKit.framework */,
+				AB6EE70F1C5FAB9500F12FFC /* MapKit.framework */,
+				AB6EE6EA1C5FAB1400F12FFC /* iRealtor */,
+				AB6EE7001C5FAB1400F12FFC /* iRealtorTests */,
+				AB6EE6E91C5FAB1400F12FFC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AB6EE6E91C5FAB1400F12FFC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AB6EE6E81C5FAB1400F12FFC /* iRealtor.app */,
+				AB6EE6FD1C5FAB1400F12FFC /* iRealtorTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AB6EE6EA1C5FAB1400F12FFC /* iRealtor */ = {
+			isa = PBXGroup;
+			children = (
+				AB6EE6ED1C5FAB1400F12FFC /* AppDelegate.swift */,
+				AB2F4C951C6D135F000FB7E3 /* Extension */,
+				AB1C37D31C6B4241004FF10F /* ViewController */,
+				AB1C37CC1C6B06D4004FF10F /* Cell */,
+				AB1C37CB1C6B06B3004FF10F /* Model */,
+				ABC9D4EC1C611D3400F4AB26 /* iRealtor.entitlements */,
+				AB6EE6F11C5FAB1400F12FFC /* Main.storyboard */,
+				AB6EE6F41C5FAB1400F12FFC /* Images.xcassets */,
+				AB6EE6F61C5FAB1400F12FFC /* LaunchScreen.xib */,
+				AB6EE6EF1C5FAB1400F12FFC /* ViewController.swift */,
+				AB6EE6EB1C5FAB1400F12FFC /* Supporting Files */,
+			);
+			path = iRealtor;
+			sourceTree = "<group>";
+		};
+		AB6EE6EB1C5FAB1400F12FFC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AB6EE6EC1C5FAB1400F12FFC /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AB6EE7001C5FAB1400F12FFC /* iRealtorTests */ = {
+			isa = PBXGroup;
+			children = (
+				AB6EE7031C5FAB1400F12FFC /* iRealtorTests.swift */,
+				AB6EE7011C5FAB1400F12FFC /* Supporting Files */,
+			);
+			path = iRealtorTests;
+			sourceTree = "<group>";
+		};
+		AB6EE7011C5FAB1400F12FFC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AB6EE7021C5FAB1400F12FFC /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AB6EE6E71C5FAB1400F12FFC /* iRealtor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB6EE7071C5FAB1400F12FFC /* Build configuration list for PBXNativeTarget "iRealtor" */;
+			buildPhases = (
+				AB6EE6E41C5FAB1400F12FFC /* Sources */,
+				AB6EE6E51C5FAB1400F12FFC /* Frameworks */,
+				AB6EE6E61C5FAB1400F12FFC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iRealtor;
+			productName = iRealtor;
+			productReference = AB6EE6E81C5FAB1400F12FFC /* iRealtor.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AB6EE6FC1C5FAB1400F12FFC /* iRealtorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB6EE70A1C5FAB1400F12FFC /* Build configuration list for PBXNativeTarget "iRealtorTests" */;
+			buildPhases = (
+				AB6EE6F91C5FAB1400F12FFC /* Sources */,
+				AB6EE6FA1C5FAB1400F12FFC /* Frameworks */,
+				AB6EE6FB1C5FAB1400F12FFC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AB6EE6FF1C5FAB1400F12FFC /* PBXTargetDependency */,
+			);
+			name = iRealtorTests;
+			productName = iRealtorTests;
+			productReference = AB6EE6FD1C5FAB1400F12FFC /* iRealtorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AB6EE6E01C5FAB1400F12FFC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "Tuan Nguyen";
+				TargetAttributes = {
+					AB6EE6E71C5FAB1400F12FFC = {
+						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = RPTJ6YJK3A;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
+					};
+					AB6EE6FC1C5FAB1400F12FFC = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = AB6EE6E71C5FAB1400F12FFC;
+					};
+				};
+			};
+			buildConfigurationList = AB6EE6E31C5FAB1400F12FFC /* Build configuration list for PBXProject "iRealtor" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AB6EE6DF1C5FAB1400F12FFC;
+			productRefGroup = AB6EE6E91C5FAB1400F12FFC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AB6EE6E71C5FAB1400F12FFC /* iRealtor */,
+				AB6EE6FC1C5FAB1400F12FFC /* iRealtorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AB6EE6E61C5FAB1400F12FFC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB6EE6F31C5FAB1400F12FFC /* Main.storyboard in Resources */,
+				AB6EE6F81C5FAB1400F12FFC /* LaunchScreen.xib in Resources */,
+				AB6EE6F51C5FAB1400F12FFC /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB6EE6FB1C5FAB1400F12FFC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AB6EE6E41C5FAB1400F12FFC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C14FEB381CB1C0400071C20A /* AdminListRealtorsViewController.swift in Sources */,
+				AB6EE6F01C5FAB1400F12FFC /* ViewController.swift in Sources */,
+				C1D56AD31CA9E57F00735EE5 /* RealtorInfo.swift in Sources */,
+				C1D56AD51CA9E7A100735EE5 /* AddRealtorViewController.swift in Sources */,
+				ABFF25091C63BE4700670567 /* AvailableHouseViewController.swift in Sources */,
+				AB1C37CE1C6B06F0004FF10F /* HouseCell.swift in Sources */,
+				ABC133231C6BE88B00438775 /* FilterViewController.swift in Sources */,
+				AB1C37CA1C6B0685004FF10F /* HouseInfo.swift in Sources */,
+				AB2F4C971C6D1373000FB7E3 /* Extension.swift in Sources */,
+				AB1C37D51C6B4367004FF10F /* LoginViewController.swift in Sources */,
+				C1606BA01CAACB2A00436FF8 /* RealtorCell.swift in Sources */,
+				ABCF9CD91C654B470059D9A9 /* AddHouseViewController.swift in Sources */,
+				C1D56AD11CA9E31F00735EE5 /* AdminAvailableHouseViewController.swift in Sources */,
+				AB6EE70E1C5FAB4900F12FFC /* MapViewController.swift in Sources */,
+				C14FEB3A1CB1C1A50071C20A /* AdminOptionsViewController.swift in Sources */,
+				AB6EE6EE1C5FAB1400F12FFC /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB6EE6F91C5FAB1400F12FFC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB6EE7041C5FAB1400F12FFC /* iRealtorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AB6EE6FF1C5FAB1400F12FFC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AB6EE6E71C5FAB1400F12FFC /* iRealtor */;
+			targetProxy = AB6EE6FE1C5FAB1400F12FFC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AB6EE6F11C5FAB1400F12FFC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AB6EE6F21C5FAB1400F12FFC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AB6EE6F61C5FAB1400F12FFC /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AB6EE6F71C5FAB1400F12FFC /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AB6EE7051C5FAB1400F12FFC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AB6EE7061C5FAB1400F12FFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AB6EE7081C5FAB1400F12FFC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = iRealtor/iRealtor.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = iRealtor/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		AB6EE7091C5FAB1400F12FFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = iRealtor/iRealtor.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = iRealtor/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		AB6EE70B1C5FAB1400F12FFC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = iRealtorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iRealtor.app/iRealtor";
+			};
+			name = Debug;
+		};
+		AB6EE70C1C5FAB1400F12FFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = iRealtorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iRealtor.app/iRealtor";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AB6EE6E31C5FAB1400F12FFC /* Build configuration list for PBXProject "iRealtor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB6EE7051C5FAB1400F12FFC /* Debug */,
+				AB6EE7061C5FAB1400F12FFC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AB6EE7071C5FAB1400F12FFC /* Build configuration list for PBXNativeTarget "iRealtor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB6EE7081C5FAB1400F12FFC /* Debug */,
+				AB6EE7091C5FAB1400F12FFC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AB6EE70A1C5FAB1400F12FFC /* Build configuration list for PBXNativeTarget "iRealtorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB6EE70B1C5FAB1400F12FFC /* Debug */,
+				AB6EE70C1C5FAB1400F12FFC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AB6EE6E01C5FAB1400F12FFC /* Project object */;
+}
