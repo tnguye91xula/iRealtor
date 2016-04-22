@@ -9,7 +9,6 @@ class AdminListRealtorsViewController: UIViewController, UITableViewDelegate, UI
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //tbvc = tabBarController!
         view.backgroundColor = UIColor.whiteColor()
         tableView.delegate = self
         tableView.dataSource = self

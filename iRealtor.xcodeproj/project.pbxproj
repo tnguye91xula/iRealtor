@@ -19,7 +19,6 @@
 		AB6EE7041C5FAB1400F12FFC /* iRealtorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6EE7031C5FAB1400F12FFC /* iRealtorTests.swift */; };
 		AB6EE70E1C5FAB4900F12FFC /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6EE70D1C5FAB4900F12FFC /* MapViewController.swift */; };
 		AB6EE7101C5FAB9500F12FFC /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB6EE70F1C5FAB9500F12FFC /* MapKit.framework */; };
-		ABC133231C6BE88B00438775 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC133221C6BE88B00438775 /* FilterViewController.swift */; };
 		ABC9D4EE1C611D7D00F4AB26 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABC9D4ED1C611D7D00F4AB26 /* CloudKit.framework */; };
 		ABCF9CD91C654B470059D9A9 /* AddHouseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCF9CD81C654B470059D9A9 /* AddHouseViewController.swift */; };
 		ABFF25091C63BE4700670567 /* AvailableHouseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFF25081C63BE4700670567 /* AvailableHouseViewController.swift */; };
@@ -59,7 +58,6 @@
 		AB6EE7031C5FAB1400F12FFC /* iRealtorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iRealtorTests.swift; sourceTree = "<group>"; };
 		AB6EE70D1C5FAB4900F12FFC /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		AB6EE70F1C5FAB9500F12FFC /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		ABC133221C6BE88B00438775 /* FilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		ABC9D4EC1C611D3400F4AB26 /* iRealtor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = iRealtor.entitlements; sourceTree = "<group>"; };
 		ABC9D4ED1C611D7D00F4AB26 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		ABCF9CD81C654B470059D9A9 /* AddHouseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddHouseViewController.swift; sourceTree = "<group>"; };
@@ -117,7 +115,6 @@
 			children = (
 				AB1C37D41C6B4367004FF10F /* LoginViewController.swift */,
 				AB6EE70D1C5FAB4900F12FFC /* MapViewController.swift */,
-				ABC133221C6BE88B00438775 /* FilterViewController.swift */,
 				ABFF25081C63BE4700670567 /* AvailableHouseViewController.swift */,
 				ABCF9CD81C654B470059D9A9 /* AddHouseViewController.swift */,
 				C1D56AD01CA9E31F00735EE5 /* AdminAvailableHouseViewController.swift */,
@@ -312,7 +309,6 @@
 				C1D56AD51CA9E7A100735EE5 /* AddRealtorViewController.swift in Sources */,
 				ABFF25091C63BE4700670567 /* AvailableHouseViewController.swift in Sources */,
 				AB1C37CE1C6B06F0004FF10F /* HouseCell.swift in Sources */,
-				ABC133231C6BE88B00438775 /* FilterViewController.swift in Sources */,
 				AB1C37CA1C6B0685004FF10F /* HouseInfo.swift in Sources */,
 				AB2F4C971C6D1373000FB7E3 /* Extension.swift in Sources */,
 				AB1C37D51C6B4367004FF10F /* LoginViewController.swift in Sources */,

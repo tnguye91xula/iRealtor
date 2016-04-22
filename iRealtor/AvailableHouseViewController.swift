@@ -83,9 +83,7 @@ class AvailableHouseViewController: UIViewController, UITableViewDelegate, UITab
         let topPriceTF = NSLayoutConstraint(item: priceFilterTF, attribute: NSLayoutAttribute.Top, relatedBy: NSLayoutRelation.Equal, toItem: bedroomsFilterTF, attribute: NSLayoutAttribute.Top, multiplier: 1.0, constant:30)
         let trailingPriceTF = NSLayoutConstraint(item: priceFilterTF, attribute: NSLayoutAttribute.Trailing, relatedBy: NSLayoutRelation.Equal, toItem: view, attribute: NSLayoutAttribute.Trailing, multiplier: 1.0, constant: -10)
         
-        //FILTER BUTTON
-        //let filterSendButton   = UIButton.buttonWithType(UIButtonType.System) as! UIButton
-    
+      
         filterSendButton.backgroundColor = UIColor.whiteColor()
         filterSendButton.setTitle("SEND", forState: UIControlState.Normal)
         filterSendButton.addTarget(self, action: "filterSendAction:", forControlEvents: UIControlEvents.TouchUpInside)
@@ -189,8 +187,7 @@ class AvailableHouseViewController: UIViewController, UITableViewDelegate, UITab
             println("Realtor Number Is")
             println(cell.house!.realtorID!)
             var contactNumber = self.realtorDic[cell.house!.realtorID!]?.contactNumber!
-            /*var contactNumber = String(stringInterpolationSegment: self.realtorDic[cell.house!.realtorID!]?.contactNumber)*/
-            //var stringNumber = String(stringInterpolationSegment: contactNumber)
+           
             var name = self.realtorDic[cell.house!.realtorID!]?.firstName
             println(contactNumber)
             if let contactNumber = contactNumber {
@@ -387,9 +384,8 @@ class AvailableHouseViewController: UIViewController, UITableViewDelegate, UITab
                     var contactNumber = record.valueForKey("ContactNumber") as! Int
                     var realtor = RealtorInfo(firstName: firstName, lastName: lastName, company: company, realtorID: realtorID, location: location, contactNumber: contactNumber, recordName: recordName)
                     
-                    self.realtorDic[realtorID] = realtor // will change or add new
+                    self.realtorDic[realtorID] = realtor 
 
-                    //self.realtors.append(realtor)
                     NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
                     })
                 }

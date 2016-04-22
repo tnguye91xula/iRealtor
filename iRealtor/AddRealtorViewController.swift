@@ -16,10 +16,6 @@ class AddRealtorViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //tbvc = tabBarController!
-        //myOrder = tbvc.order
-        //self.navigationController!.navigationBar.translucent = false;
-        
         let recordNameLabel = UILabel()
         recordNameLabel.text = "Record Name:"
         recordNameLabel.setTranslatesAutoresizingMaskIntoConstraints(false)

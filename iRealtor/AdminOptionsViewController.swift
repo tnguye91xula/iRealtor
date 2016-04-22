@@ -5,9 +5,6 @@ import UIKit
 import CloudKit
 
 class AdminOptionsViewController: UIViewController {
-
-    
-    
     
   private var tbvc = UITabBarController()
      override func viewDidLoad() {

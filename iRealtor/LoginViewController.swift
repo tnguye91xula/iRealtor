@@ -11,34 +11,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate  {
         super.viewDidLoad()
         tbvc = tabBarController!
         self.view.backgroundColor = UIColor.whiteColor()
-        /*usernameTF.frame = CGRectMake(85, 90, 200, 30)
-        usernameTF.backgroundColor = UIColor.lightGrayColor()
-        passwordTF.frame = CGRectMake(85, 170, 200, 30)
-        passwordTF.backgroundColor = UIColor.lightGrayColor()
-        let placeholderUsername = NSAttributedString(string: "Enter Username here", attributes: [NSForegroundColorAttributeName: UIColor.whiteColor()])
-        let placeholderPassword = NSAttributedString(string: "Enter Password here", attributes: [NSForegroundColorAttributeName: UIColor.whiteColor()])
-
-        usernameTF.attributedPlaceholder = placeholderUsername
-        view.addSubview(usernameTF)
-        
-        passwordTF.attributedPlaceholder = placeholderPassword
-        view.addSubview(passwordTF)
-        
-        let loginButton = UIButton.buttonWithType(UIButtonType.System) as! UIButton
-        loginButton.backgroundColor = UIColor.greenColor()
-        loginButton.setTitle("Button", forState: UIControlState.Normal)
-        loginButton.frame = CGRectMake(135, 225, 100, 50)
-        loginButton.addTarget(self, action: "loginTouched:", forControlEvents: UIControlEvents.TouchUpInside)
-        self.view.addSubview(loginButton)*/
-        //self.navigationController
         let placeholderUsername = NSAttributedString(string: "Enter Username here", attributes: [NSForegroundColorAttributeName: UIColor.blueColor()])
         let placeholderPassword = NSAttributedString(string: "Enter Password here", attributes: [NSForegroundColorAttributeName: UIColor.blueColor()])
         
         usernameTF.attributedPlaceholder = placeholderUsername
-        //view.addSubview(usernameTF)
         
         passwordTF.attributedPlaceholder = placeholderPassword
-        //view.addSubview(passwordTF)
+       
         
         let viewTitle = UILabel()
         viewTitle.text = ""
@@ -49,28 +28,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate  {
         let topViewTitle = NSLayoutConstraint(item: viewTitle, attribute: NSLayoutAttribute.Top, relatedBy: NSLayoutRelation.Equal, toItem: view, attribute: NSLayoutAttribute.Top, multiplier: 1.0, constant: 10)
         let centerViewTitle = NSLayoutConstraint(item: viewTitle, attribute: NSLayoutAttribute.CenterX, relatedBy: NSLayoutRelation.Equal, toItem: view, attribute: NSLayoutAttribute.CenterX, multiplier: 1.0, constant:10)
         
-    
-        //ADD HOUSE BUTTON
-        /*let addHouseButton   = UIButton.buttonWithType(UIButtonType.System) as! UIButton
-        addHouseButton.backgroundColor = UIColor.whiteColor()
-        addHouseButton.setTitle("ADD HOUSE", forState: UIControlState.Normal)
-        addHouseButton.addTarget(self, action: "addHouseAction:", forControlEvents: UIControlEvents.TouchUpInside)
-        
-        addHouseButton.setTranslatesAutoresizingMaskIntoConstraints(false)*/
-        //self.view.addSubview(addHouseButton)
-            view.addSubview(usernameTF)
+        view.addSubview(usernameTF)
         let topAddHouseButton = NSLayoutConstraint(item: usernameTF, attribute: NSLayoutAttribute.Top, relatedBy: NSLayoutRelation.Equal, toItem: viewTitle, attribute: NSLayoutAttribute.Bottom, multiplier: 1.0, constant:100)
         let centerAddHouseButton = NSLayoutConstraint(item: usernameTF, attribute: NSLayoutAttribute.CenterX, relatedBy: NSLayoutRelation.Equal, toItem: view, attribute: NSLayoutAttribute.CenterX, multiplier: 1.0, constant:10)
         
-        //LIST HOUSES BUTTON
-        /*let listHouseButton   = UIButton.buttonWithType(UIButtonType.System) as! UIButton
-        listHouseButton.backgroundColor = UIColor.whiteColor()
-        listHouseButton.setTitle("LIST HOUSES", forState: UIControlState.Normal)
-        listHouseButton.addTarget(self, action: "listHouseAction:", forControlEvents: UIControlEvents.TouchUpInside)
-        
-        listHouseButton.setTranslatesAutoresizingMaskIntoConstraints(false)
-        self.view.addSubview(listHouseButton)*/
-         view.addSubview(passwordTF)
+        view.addSubview(passwordTF)
         passwordTF.secureTextEntry = true
         let topListHouseButton = NSLayoutConstraint(item: passwordTF, attribute: NSLayoutAttribute.Top, relatedBy: NSLayoutRelation.Equal, toItem: usernameTF, attribute: NSLayoutAttribute.Bottom, multiplier: 1.0, constant:10)
         let centerListHouseButton = NSLayoutConstraint(item: passwordTF, attribute: NSLayoutAttribute.CenterX, relatedBy: NSLayoutRelation.Equal, toItem: view, attribute: NSLayoutAttribute.CenterX, multiplier: 1.0, constant:10)
@@ -92,8 +54,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate  {
         
          NSLayoutConstraint.activateConstraints([topAddHouseButton,centerAddHouseButton, topListHouseButton, centerListHouseButton, topLoginButton, centerLoginButton])
         
-        /*NSLayoutConstraint.activateConstraints([topAddHouseButton,centerAddHouseButton, centerViewTitle, leadingViewTitle, centerViewTitle, topListHouseButton, centerListHouseButton, topAddRealtorButton, centerAddRealtorButton])*/
-
     }
     
     override func didReceiveMemoryWarning() {

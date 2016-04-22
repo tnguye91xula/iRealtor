@@ -17,10 +17,7 @@ class AddHouseViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //tbvc = tabBarController!
-        //myOrder = tbvc.order
-        //self.navigationController!.navigationBar.translucent = false;
-        
+                
         let recordName = UILabel()
         recordName.text = "Record Name:"
         recordName.setTranslatesAutoresizingMaskIntoConstraints(false)

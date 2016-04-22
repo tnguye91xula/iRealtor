@@ -21,22 +21,19 @@ class MapViewController: UIViewController,  MKMapViewDelegate, CLLocationManager
     override func viewDidLoad() {
         super.viewDidLoad()
         tbvc = tabBarController!
-        //myOrder = tbvc.order
+  
         self.edgesForExtendedLayout = UIRectEdge.None
         let filter = UIBarButtonItem(title: "Filter", style: UIBarButtonItemStyle.Plain, target: self, action: "filterTapped:")
         self.navigationItem.rightBarButtonItems = [filter]
         
         let addHouse = UIBarButtonItem(title: "Admin Login", style: UIBarButtonItemStyle.Plain, target: self, action: "adminTapped:")
         self.navigationItem.leftBarButtonItems = [addHouse]
-        
-        /*let favorite = UIBarButtonItem(title: "Favorite", style: UIBarButtonItemStyle.Plain, target: self, action: "favoriteTapped:")
-        self.navigationItem.leftBarButtonItems = [favorite]*/
+  
         
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
-        /*let userLocation = CLLocation(latitude: locationManager.location.coordinate.latitude, longitude: locationManager.location.coordinate.longitude)*/
         mapView.delegate = self
         mapView.mapType = MKMapType.Standard
         mapView.zoomEnabled = true
@@ -49,8 +46,6 @@ class MapViewController: UIViewController,  MKMapViewDelegate, CLLocationManager
         singleTap.numberOfTouchesRequired = 1
         mapView.addGestureRecognizer(singleTap)
         self.view.addSubview(mapView)
-        //print(self.userLocation)
-        //self.queryHouses(self.userLocation)
         
         let leading =  NSLayoutConstraint(item: mapView, attribute: NSLayoutAttribute.Leading, relatedBy: NSLayoutRelation.Equal, toItem: view, attribute: NSLayoutAttribute.Leading, multiplier: 1.0, constant: 0)
         
@@ -75,20 +70,6 @@ class MapViewController: UIViewController,  MKMapViewDelegate, CLLocationManager
         navigationController?.pushViewController(vc, animated: true )
     }
 
-    /*func favoriteTapped(sender:UIButton!) {
-        var t: [AnyObject] = self.mapView.annotations
-        mapView.removeAnnotations(t)
-        for house in (favoriteHouses as NSArray as! [HouseInfo]) {
-            var objectAnnotation = MKPointAnnotation()
-            objectAnnotation.coordinate = CLLocationCoordinate2DMake(house.location!.coordinate.latitude, house.location!.coordinate.longitude)
-            objectAnnotation.title = "Latitude: \(house.location!.coordinate.latitude) Longitude: \(house.location!.coordinate.longitude)"
-            self.mapView.addAnnotation(objectAnnotation)
-            self.mapView.selectAnnotation(objectAnnotation, animated: true)
-        }
-        self.edited = false
-        let back = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.Plain, target: self, action: "backToNormal:")
-        self.navigationItem.leftBarButtonItems = [back]
-    }*/
     
     func favoriteTapped(sender:UIButton!) {
         var t: [AnyObject] = self.mapView.annotations
@@ -146,13 +127,7 @@ class MapViewController: UIViewController,  MKMapViewDelegate, CLLocationManager
                     }
                 }
             }
-                /*var objectAnnotation = MKPointAnnotation()
-                objectAnnotation.title = "Current Location"
-                objectAnnotation.subtitle = "Latitude: \(pm.location.coordinate.latitude) Longitude: \(pm.location.coordinate.longitude)"
-                objectAnnotation.coordinate = userCurrentLocationCoord
-                self.annotations.addObject(objectAnnotation)
-                self.mapView.addAnnotation(objectAnnotation)
-                self.mapView.selectAnnotation(objectAnnotation, animated: true)*/
+                
                 self.displayLocationInfo(pm)
             } else {
                 println("Error with the data.")
@@ -164,7 +139,7 @@ class MapViewController: UIViewController,  MKMapViewDelegate, CLLocationManager
         let container = CKContainer.defaultContainer()
         let publicDatabase = container.publicCloudDatabase
         let radiusInKilometers = 60.00
-        //let predicate = NSPredicate(value: true)
+       
         let predicate = NSPredicate(format: "distanceToLocation:fromLocation:(Location, %@) < %f", userLocation, 32.1869)
         
         let locationPredicate = NSPredicate(format: "distanceToLocation:fromLocation:(%K,%@) < %f",
@@ -209,9 +184,7 @@ class MapViewController: UIViewController,  MKMapViewDelegate, CLLocationManager
                         let imageData = NSData(contentsOfURL: assets[0].fileURL)
                         var image = UIImage(data: imageData!)
                         var house = HouseInfo(name: name, bathrooms: bathR, bedrooms: bedR, houseID: hID, address: string, location: location, price: price, sold: sold, realtorID: rID)
-                        println("Houses within range of user location")
-                        println(house)
-                        //self.houses.append(house)
+                     
                         NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
                             self.houses.append(house)
 
@@ -278,17 +251,7 @@ class MapViewController: UIViewController,  MKMapViewDelegate, CLLocationManager
     }
     
     func didTapMap(gestureRecognizer: UIGestureRecognizer) {
-        /*if( self.edited == true) {
-            let tapPoint: CGPoint = gestureRecognizer.locationInView(mapView)
-            let touchMapCoordinate: CLLocationCoordinate2D = mapView.convertPoint(tapPoint, toCoordinateFromView: mapView)
-            var objectAnnotation = MKPointAnnotation()
-            objectAnnotation.coordinate = touchMapCoordinate
-            objectAnnotation.title = "Latitude: \(objectAnnotation.coordinate.latitude) Longitude: \(objectAnnotation.coordinate.longitude)"
-            self.annotations.addObject(objectAnnotation)
-            self.mapView.addAnnotation(objectAnnotation)
-            self.mapView.selectAnnotation(objectAnnotation, animated: true)
-        }*/
-    }
+            }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

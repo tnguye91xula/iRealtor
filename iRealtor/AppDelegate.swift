@@ -34,43 +34,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 tag:3)
                 return true
     }
-    /*func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        navController = UINavigationController()
-        
-        let tabBarController = UITabBarController()
-        let myVC1 = MapViewController(nibName: "MapVC", bundle: nil)
-        let myVC2 = LoginViewController(nibName: "LoginVC", bundle: nil)
-        let controllers = [myVC1,myVC2]
-        tabBarController.viewControllers = controllers
-        window?.rootViewController = tabBarController
-        let firstImage = UIImage(named: "pie bar icon")
-        let secondImage = UIImage(named: "pizza bar icon")
-        myVC1.tabBarItem = UITabBarItem(
-            title: "Pie",
-            image: firstImage,
-            tag: 1)
-        myVC2.tabBarItem = UITabBarItem(
-            title: "Pizza",
-            image: secondImage,
-            tag:2)
-        
-        //var viewController: MapViewController = MapViewController()
-        //self.queryHouses(viewController.favoriteHouses)
-        
-        //        var viewController: AvailableHouseViewController = AvailableHouseViewController()
-        //        viewController.add = UIBarButtonItem(barButtonSystemItem: .Add, target: viewController, action: "addTapped:")
-        
-        //        var viewController: AddHouseViewController = AddHouseViewController()
-        //        var viewController: LoginViewController = LoginViewController()
-        
-       // self.navController!.pushViewController(viewController, animated: false)
-        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        //self.window!.rootViewController = navController
-        self.window!.backgroundColor = UIColor.whiteColor()
-        self.window!.makeKeyAndVisible()
-        return true
-    }*/
     
     func queryHouses(favoriteHouses: NSMutableArray) {
         let container = CKContainer.defaultContainer()
